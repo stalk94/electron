@@ -120,13 +120,3 @@ project/
  ├ package.json
  └ vite.config.js
 ```
-
----
-
-## 🌟 Why This Project?
-
-✔ Shows real-time work with binary data  
-✔ Demonstrates Electron Main/Renderer architecture  
-✔ Shows IoT experience (UDP / telemetry)  
-✔ Clean UI and readable code  
-✔ A realistic interview-ready demo  
