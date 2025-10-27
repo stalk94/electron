@@ -14,7 +14,7 @@ export default function TelemetryChart({ stream }) {
             bufferRef.current.push(val); // ✅ собираем частые данные
         });
 
-        // ✅ график обновляется только раз в 100ms
+        // ✅ график обновляется только раз в 300ms
         timerRef.current = setInterval(() => {
             if (bufferRef.current.length > 0) {
                 setPoints((prev) => {
@@ -23,14 +23,13 @@ export default function TelemetryChart({ stream }) {
                     return merged;
                 });
             }
-        }, 100);
+        }, 300);
 
         return () => {
             unsub?.();
             clearInterval(timerRef.current);
         };
     }, [stream]);
-
     const data = {
         labels: points.map((_, i) => String(i)),
         datasets: [
@@ -42,7 +41,7 @@ export default function TelemetryChart({ stream }) {
                 backgroundColor: "#60a5fa30"
             }
         ]
-    };
+    }
 
     
     return (
