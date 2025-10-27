@@ -1,0 +1,13 @@
+/.vscode
+/node_modules
+/node_modules/.vite
+/package-lock.json
+/db
+/public/snapshots
+/public/uploads
+/.next
+/src/dist
+/dist
+/build
+.env
+pass.txt

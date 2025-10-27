@@ -1,0 +1,30 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electron/main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -r \"npm:dev:renderer\" \"npm:dev:electron\"",
+    "dev:renderer": "vite --port 5173",
+    "dev:electron": "nodemon --watch electron --ext js,json --exec \"electron .\"",
+    "build": "vite build",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "electron": "^32.0.0",
+    "mistui-kit": "^1.6.1",
+    "nodemon": "^3.1.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^9.2.1",
+    "vite": "^5.4.0"
+  }
+}
